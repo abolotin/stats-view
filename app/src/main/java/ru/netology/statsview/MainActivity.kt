@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             500F,
             500F,
             500F,
-            250F
+            200F
         )
     }
 }
