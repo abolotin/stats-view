@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.animation.AnimationUtils
 import ru.netology.statsview.ui.StatsView
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +18,29 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        findViewById<StatsView>(R.id.statsView).data = listOf(
+        val viewParallel = findViewById<StatsView>(R.id.statsViewParallel)
+        val viewSequential = findViewById<StatsView>(R.id.statsViewSequential)
+        val viewBidirectional = findViewById<StatsView>(R.id.statsViewBidirectional)
+
+        viewParallel.data = listOf(
             500F,
             500F,
             500F,
-            200F
+            500F
+        )
+
+        viewSequential.data = listOf(
+            500F,
+            500F,
+            500F,
+            500F
+        )
+
+        viewBidirectional.data = listOf(
+            500F,
+            500F,
+            500F,
+            500F
         )
     }
 }
